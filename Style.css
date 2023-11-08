@@ -1,0 +1,74 @@
+
+/* For creating global variable */
+:root{
+    --primary-color: red; /* Global Variable*/
+    --fonts: 2.5rem;
+
+    --color: rgb(62, 18, 71);
+    --seccol: rgb(146, 173, 72);
+
+    --defopp: 0.4;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.wrapper{
+    width: 100vw;
+    height: 100dvh;
+    background-color: rgba(95, 88, 88, 0.582);
+    /* padding: 10px 5px; */
+}
+
+
+.nav ul{
+    /* margin-left: 25px; */
+    list-style-position: inside;
+    list-style: none;
+    display: flex;
+    background-color: var(--color);
+    margin-bottom: 20px;
+    padding: 25px;
+}
+li{
+    margin: 15px;
+}
+
+ul li:first-child{
+    --back: rgb(128, 58, 0);
+    background-color: var(--back);
+}
+
+
+.container2{
+    margin-bottom: 40px;
+    /* background-color: rgb(103, 136, 103); */
+    background-color: var(--seccol);
+    opacity: var(--defopp);
+}
+
+p{
+    --first-col:yellow; /* Local Variable*/
+    background-color: var(--first-col);
+    background-color: var(--primary-color, green);
+    font-size: var(--fonts);
+    --line-space: 2.6rem; /* Local Variable*/
+    line-height: var(--line-space);
+}
+
+h1{
+    background-color: var(--first-col);
+    --Rang: crimson;
+    color: var(--Rang);
+}
+
+article{
+    background-color: var(--secondary-color, skyblue);
+    /* As neither a local variable nor a global variable exist having name "secondary-color" therefore default value(sky blue) will be assigned 
+       to background-color property. */
+}

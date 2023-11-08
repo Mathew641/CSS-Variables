@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorial-30-CSS Variables</title>
+    <meta name="description" content="This tutorial is about how to create variables in CSS and using it">
+    <meta name="keywords" content="HTML, CSS, JS, React, NodeJS">
+    <meta name="robot" content="INDEX, FOLLOW">
+
+    <link rel="stylesheet" href="./Style.css">
+    <link rel="shortcut icon" href="./Variables.webp" type="image/x-icon">
+
+</head>
+<body>
+    
+    <div class="wrapper">
+
+        <div class="container">
+
+
+            <!-- 
+                CSS Variables -> CSS variables are use to contain the values such as color, width dimension, dimension for padding, height, 
+                                  value for line-height etc that we want to assign to css properties of particcular element/elements using "var" function.
+
+                                  CSS variables can hold not hold only color but also hold values for different kind of css property.
+
+                                  A variable is created usiing double dash ->   --variable-name: value;
+
+                                  CSS variables are of 2 types:
+                                  1.)Global Variable -> value of ths variable can be assign to the respective css properties of any element.
+                                                        Global css variable is declared inside the root only.
+
+                                                        e.g.  :root{
+                                                                 --var-name: value; 
+                                                               }
+
+                                                               div p:first element{
+                                                                        css property: var(--var-name);
+                                                               }
+
+
+                                  2.)Local Variable -> Local variable is created inside the particular element block only in which we want to 
+                                                       use.
+                                                       Local variable can't be used anywhere except in that element block inside which it has been created.
+
+                                                       e.g.  h1{
+                                                              --fonts: value;
+                                                              font-size: var(--fonts);
+                                                            }
+                    
+                  Fall Back Variable ->
+                NOTE : Sometime it might happen that a variable created initialy does not exist anymore or might be commented and if we use 
+                       same variable for assigning particular value to a respective property to a specific element, then in that case that css property will not get implemented to that element. That's why we should give a default value along that variable.
+
+                       e.g:  article{
+                                 background-color: var(--sec-col, violet);
+                             }
+
+                    Now if neither a local variable nor a global variable exist having name "sec-col" then default value(violet) will be assigned to the background-color property of article.
+                    Hence if a variable is not found then in that case we can use concept of "Fall back variable"
+
+
+            On Changing the value of variable to some other value, then that new value will get implemented at all places in the website wherever we have applied css property using that variable.
+
+            We can CSS variables can acts like a function. 
+             -->
+
+
+            <div class="nav">
+                <ul>
+                    <li>Home</li>
+                    <li>About us</li>
+                    <li>Contact Us</li>
+                </ul>
+            </div>
+
+            <div class="container2">
+                Container2 Div Element -> Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti illo sed temporibus doloribus ipsum quasi dignissimos vitae natus, esse laudantium cum veritatis ea corporis inventore earum ipsa veniam deserunt quidem facilis repellat perferendis dolorem cupiditate. Ex repellat cum veniam perspiciatis.
+            </div>
+
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit officia ipsa nisi dicta quibusdam eligendi? Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae quisquam voluptates voluptate iste voluptas cumque consequatur suscipit, laudantium, fugit optio dolore ipsum perspiciatis, dolor expedita. Aperiam voluptas voluptatem, vero unde mollitia recusandae labore odit ullam corporis, illo doloremque, vitae ab excepturi esse ea. Non quia illum quae, ipsum eos consectetur saepe natus. Sit consectetur architecto eius totam iure aspernatur aliquid?
+            </p>
+
+            <div class="second-para">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti expedita id debitis, similique tempore, eos eaque, beatae assumenda incidunt dolorum ipsa magnam amet nam facilis quas iure consectetur eius ex neque voluptate unde libero animi itaque. Voluptates amet ea eligendi voluptatem qui.
+
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui laboriosam quisquam enim suscipit, voluptas, dolor reprehenderit reiciendis deserunt, delectus explicabo magnam ad quod recusandae animi.
+                </p>
+
+            <h1>Welcome to CodeArmy</h1>
+<br/>
+            <article>
+                This is the first article which can get some default value if the assigned value does not exist.
+            </article>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- <script src="./Index.js"></script> -->
+</body>
+</html>
